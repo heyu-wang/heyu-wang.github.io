@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=1.55cm,top=1.6cm,bottom=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+\setmainfont{Times New Roman}
+\definecolor{accent}{HTML}{2D6EA7}
+\definecolor{textgray}{HTML}{5B6875}
+\definecolor{rulegray}{HTML}{D2DCE6}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.03}
+\setlist[itemize]{leftmargin=1.3em,label=\textcolor{accent}{\footnotesize\textbullet},itemsep=3.6pt,topsep=4.2pt,parsep=0pt}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\bfseries\fontsize{11pt}{13pt}\selectfont\color{accent}}
+  {}{0pt}{}
+  [\vspace{0.35em}\color{rulegray}\titlerule]
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+
+\newcommand{\sectionicon}[1]{\raisebox{-0.08em}{\small #1}\hspace{0.45em}}
+
+\newcommand{\educationheader}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {\bfseries #1} & {\small\color{textgray}#2}\\[-0.12em]
+  \end{tabularx}%
+}
+
+\newcommand{\educationline}[1]{%
+  \noindent{\small #1}\par\vspace{3pt}%
+}
+
+\newcommand{\research}[3]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {\bfseries #1} & {\small\color{textgray}#2}
+  \end{tabularx}%
+}
+
+\newcommand{\dateditem}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {#1} & {\small\color{textgray}#2}\\[-0.12em]
+  \end{tabularx}\vspace{0.34em}%
+}
+
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+  {\bfseries\fontsize{22pt}{26pt}\selectfont 王鹤宇}\\[0.48em]
+  \small\color{textgray}
+  \href{mailto:wangheyu23@mails.ucas.ac.cn}{\faEnvelope\ wangheyu23@mails.ucas.ac.cn}
+  \hspace{1.8em}
+  \href{https://github.com/xiaoshouyichuai}{\faGithub\ github.com/xiaoshouyichuai}
+\end{center}
+\vspace{0.1em}
+
+% ===== Education =====
+\section[教育背景]{\sectionicon{\faGraduationCap}教育背景}
+\educationheader{中国科学院大学}{2023 -- 至今}
+\vspace{0.32em}
+\educationline{计算机科学与技术专业本科生}
+\educationline{\textbf{GPA：}3.85}
+\educationline{\textbf{专业排名：}17/86}
+\educationline{\textbf{CET-6：}558}
+{\small \textbf{课程：}自然语言处理（93）；人工智能计算系统（96）；操作系统实验（93）}
+
+% ===== Skills =====
+\section[技术能力]{\sectionicon{\faTools}技术能力}
+{\small
+\textbf{编程语言：}C、Assembly、Python、Verilog。\\[3.8pt]
+\textbf{工具：}SSH、Git、Docker、\LaTeX。
+}
+
+% ===== Research Experience =====
+\section[研究经历]{\sectionicon{\faFlask}研究经历}
+
+\research{操作系统实验}{2025 年秋季}{https://github.com/xiaoshouyichuai/OS}
+\begin{itemize}
+  \item 基于 RISC-V 开发操作系统内核，完成 6 个实验任务及进阶扩展。
+  \item 实现进程调度、虚拟内存、文件系统和多核 SMP 等核心服务。
+  \item 完成中断处理、系统调用及 e1000 网卡驱动，实现网络通信。
+\end{itemize}
+
+\vspace{0.5em}
+\research{计算机体系结构实验与计算机组成原理实验}{2025 年秋季}{https://github.com/xiaoshouyichuai/CA}
+\begin{itemize}
+  \item 在计算机组成原理实验中实现基于 MIPS 和 RISC-V 的多周期 CPU。
+  \item 在体系结构实验中协作开发基于 LoongArch 的五级流水线 CPU。
+  \item 实现基本框架、Cache 和 AXI 总线，并完成与流水线的集成。
+\end{itemize}
+
+\vspace{0.5em}
+\research{机器学习导论}{2025 年秋季}{https://github.com/xiaoshouyichuai/Kaggle--Plant-Seedlings-Classification}
+\begin{itemize}
+  \item 在 Kaggle 植物幼苗数据集上搭建 BasicCNN 基线，并评估 ResNet 与 Vision Transformer。
+  \item 使用 AdamW、标签平滑、预训练和分阶段解冻，将验证准确率从 26\% 提升至 95\%。
+\end{itemize}
+
+% ===== Awards =====
+\section[荣誉奖项]{\sectionicon{\faAward}荣誉奖项}
+\dateditem{校级三好学生}{2024、2025、2026}
+\dateditem{校级二等奖学金}{2023 -- 2024}
+\dateditem{校级三等奖学金}{2024 -- 2025}
+
+% ===== Public Affairs =====
+\section[学生工作]{\sectionicon{\faUsers}学生工作}
+\dateditem{中国科学院大学学生会生活文化部干事}{2023 -- 2024}
+\dateditem{中国科学院大学星空志愿者协会外联部部长}{2024 -- 2025}
+
+\end{document}

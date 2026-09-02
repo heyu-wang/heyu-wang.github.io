@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heyu Wang — undergraduate student in Computer Science and Technology at UCAS." />
+  <title>Heyu Wang | Academic Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Profile">
+      <div class="sidebar-inner">
+        <div class="portrait-wrap">
+          <img id="profile-photo" class="portrait" src="photo.jpg" alt="Profile photo" />
+          <div class="portrait-fallback" id="portrait-fallback">HW</div>
+        </div>
+
+        <div class="identity">
+          <h1 id="profile-name">Heyu Wang</h1>
+          <p class="role" id="profile-role"></p>
+          <p class="location" id="profile-location"></p>
+          <p class="affiliation" id="profile-affiliation"></p>
+        </div>
+
+        <p class="sidebar-intro" id="profile-intro"></p>
+
+        <section class="sidebar-contact" id="contact-box" aria-labelledby="contact-title">
+          <p class="sidebar-heading" id="contact-title">Contact &amp; links</p>
+          <div class="sidebar-links" id="sidebar-links"></div>
+        </section>
+
+        <section class="sidebar-note" id="current-box" aria-labelledby="current-title">
+          <div class="current-label"><span class="current-dot" aria-hidden="true"></span><p class="sidebar-heading" id="current-title">Currently</p></div>
+          <p id="current-text"></p>
+        </section>
+
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="intro-block" id="about">
+        <h2 id="about-title"><span class="section-emoji" aria-hidden="true">👋</span>About me</h2>
+        <div class="prose" id="about-text"></div>
+      </section>
+
+      <section class="content-section" id="education">
+        <div class="section-head">
+          <h2><span class="section-emoji" aria-hidden="true">🎓</span>Education</h2>
+        </div>
+        <div class="timeline" id="education-list"></div>
+      </section>
+
+      <div class="summary-grid">
+        <section class="content-section" id="interests">
+          <div class="section-head">
+            <h2><span class="section-emoji" aria-hidden="true">🔬</span>Research interests</h2>
+          </div>
+          <div class="interest-list" id="interest-list"></div>
+        </section>
+
+        <section class="content-section" id="honors">
+          <div class="section-head">
+            <h2><span class="section-emoji" aria-hidden="true">🏅</span>Awards</h2>
+          </div>
+          <div class="honor-list" id="honor-list"></div>
+        </section>
+      </div>
+
+      <section class="content-section" id="experience" hidden>
+        <div class="section-head"><h2><span class="section-emoji" aria-hidden="true">💼</span>Experience</h2></div>
+        <div class="timeline" id="experience-list"></div>
+      </section>
+
+      <section class="content-section" id="publications" hidden>
+        <div class="section-head"><h2><span class="section-emoji" aria-hidden="true">📝</span>Publications</h2></div>
+        <div class="simple-list" id="publication-list"></div>
+      </section>
+
+      <section class="content-section" id="projects" hidden>
+        <div class="section-head"><h2><span class="section-emoji" aria-hidden="true">🗂️</span>Projects</h2></div>
+        <div class="simple-list" id="project-list"></div>
+      </section>
+
+      <section class="content-section" id="hobbies" hidden>
+        <div class="section-head"><h2><span class="section-emoji" aria-hidden="true">🎧</span>Hobbies</h2></div>
+        <div class="hobby-list" id="hobby-list"></div>
+      </section>
+
+      <footer class="footer">
+        <span id="footer-name"></span>
+        <span id="footer-year"></span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.55cm,top=1.6cm,bottom=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+\newfontfamily\headingfont{Times New Roman}
+
+\definecolor{accent}{HTML}{2D6EA7}
+\definecolor{textgray}{HTML}{5B6875}
+\definecolor{rulegray}{HTML}{D2DCE6}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.03}
+\setlist[itemize]{leftmargin=1.3em,label=\textcolor{accent}{\footnotesize\textbullet},itemsep=3.6pt,topsep=4.2pt,parsep=0pt}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\headingfont\bfseries\fontsize{11pt}{13pt}\selectfont\color{accent}}
+  {}{0pt}{}
+  [\vspace{0.35em}\color{rulegray}\titlerule]
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+
+\newcommand{\sectionicon}[1]{\raisebox{-0.08em}{\small #1}\hspace{0.45em}}
+
+\newcommand{\educationheader}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {\headingfont\bfseries #1} & {\small\color{textgray}#2}\\[-0.12em]
+  \end{tabularx}%
+}
+
+\newcommand{\educationline}[1]{%
+  \noindent{\small #1}\par\vspace{3pt}%
+}
+
+\newcommand{\project}[3]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {\headingfont\bfseries #1} & {\small\color{textgray}#2}
+  \end{tabularx}%
+}
+
+\newcommand{\award}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    {#1} & {\small\color{textgray}#2}\\[-0.12em]
+  \end{tabularx}\vspace{0.34em}%
+}
+
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+  {\headingfont\bfseries\fontsize{22pt}{26pt}\selectfont Heyu Wang}\\[0.48em]
+  \small\color{textgray}
+  \href{mailto:wangheyu23@mails.ucas.ac.cn}{\faEnvelope\ wangheyu23@mails.ucas.ac.cn}
+  \hspace{1.8em}
+  \href{https://github.com/xiaoshouyichuai}{\faGithub\ github.com/xiaoshouyichuai}
+\end{center}
+\vspace{0.1em}
+
+% ===== Education =====
+\section[Education]{\sectionicon{\faGraduationCap}\MakeUppercase{Education}}
+\educationheader{University of Chinese Academy of Sciences}{2023 -- Present}
+\vspace{0.32em}
+\educationline{Undergraduate Student in Computer Science and Technology}
+\educationline{\textbf{GPA:} 3.85}
+\educationline{\textbf{Rank:} 17/86}
+\educationline{\textbf{CET-6:} 558}
+{\small {\headingfont\bfseries Coursework:} Natural Language Processing (93); AI Computing Systems (96); Lab of Operating System (93)}
+
+% ===== Skills =====
+\section[Technical Skills]{\sectionicon{\faTools}\MakeUppercase{Technical Skills}}
+{\small
+{\headingfont\bfseries Languages:} C, Assembly, Python, Verilog.\\[3.8pt]
+{\headingfont\bfseries Tools:} SSH, Git, Docker, \LaTeX.
+}
+
+% ===== Research Experience =====
+\section[Research Experience]{\sectionicon{\faFlask}\MakeUppercase{Research Experience}}
+
+\project{Lab of Operating System}{Fall 2025}{https://github.com/xiaoshouyichuai/OS}
+\begin{itemize}
+  \item Developed a RISC-V operating system kernel through six lab assignments and advanced extensions.
+  \item Implemented core services including process scheduling, virtual memory, a file system, and SMP support.
+  \item Added interrupt handling, system calls, and an e1000 NIC driver for network communication.
+\end{itemize}
+
+\vspace{0.5em}
+\project{Computer Architecture Lab \& Labs of Computer Organization and Design}{Fall 2025}{https://github.com/xiaoshouyichuai/CA}
+\begin{itemize}
+  \item Implemented multi-cycle MIPS and RISC-V CPUs in the Computer Organization and Design lab.
+  \item Co-developed a five-stage LoongArch pipelined CPU in the Computer Architecture Lab.
+  \item Built the basic framework and integrated cache and AXI bus support into the pipeline.
+\end{itemize}
+
+\vspace{0.5em}
+\project{Introduction to Machine Learning}{Fall 2025}{https://github.com/xiaoshouyichuai/Kaggle--Plant-Seedlings-Classification}
+\begin{itemize}
+  \item Built a BasicCNN baseline and evaluated ResNet and Vision Transformer models on Kaggle's Plant Seedlings dataset.
+  \item Used AdamW, label smoothing, pre-training, and staged unfreezing to improve validation accuracy from 26\% to 95\%.
+\end{itemize}
+
+% ===== Awards =====
+\section[Awards]{\sectionicon{\faAward}\MakeUppercase{Awards}}
+\award{Triple-A Student}{2024, 2025, 2026}
+\award{Second-Class Academic Scholarship}{2023 -- 2024}
+\award{Third-Class Academic Scholarship}{2024 -- 2025}
+
+% ===== Public Affairs =====
+\section[Public Affairs]{\sectionicon{\faUsers}\MakeUppercase{Public Affairs}}
+\award{Officer, Department of Life and Culture, UCAS Student Union}{2023 -- 2024}
+\award{Head of External Relations, Starry Sky Volunteer Association, UCAS}{2024 -- 2025}
+
+\end{document}

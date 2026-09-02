@@ -1,0 +1,64 @@
+const homepageData = {
+  profile: {
+    name: "Heyu Wang",
+    initials: "HW",
+    role: "UCAS CS Undergraduate Student",
+    location: "Beijing, China",
+    affiliation: "",
+    shortIntro: "",
+    current: "Preparing to explore recommender systems.",
+    photo: "photo.jpg",
+    links: [
+      { label: "Email", url: "mailto:wangheyu23@mails.ucas.ac.cn" },
+      { label: "GitHub", url: "https://github.com/xiaoshouyichuai" },
+      { label: "CV", url: "Resume.pdf" }
+    ]
+  },
+
+  about: {
+    title: "About me",
+    icon: "👋",
+    paragraphs: [
+      {
+        parts: [
+          { text: "I am an undergraduate student at the " },
+          { text: "University of Chinese Academy of Sciences (UCAS)", url: "https://english.ucas.ac.cn/" },
+          { text: ", currently working with " },
+          { text: "Prof. Fei Sun", url: "https://ofey.me/" },
+          { text: " and the " },
+          { text: "STAR Group", url: "https://ict-star.github.io/" },
+          { text: "." }
+        ]
+      }
+    ]
+  },
+
+  interests: [
+    { title: "LLM Safety", description: "Jailbreak analysis and safety evaluation." },
+    { title: "AI Agents", description: "Interested in agent skills, tool use, and agentic workflows." },
+    { title: "Recommender Systems", description: "Planning to explore recommender systems." }
+  ],
+
+  education: [
+    {
+      time: "2023 — Present",
+      role: "Undergraduate Student in Computer Science and Technology",
+      place: "University of Chinese Academy of Sciences"
+    }
+  ],
+
+  honors: [
+    { year: "2024 · 2025 · 2026", title: "Triple-A Student", organization: "University of Chinese Academy of Sciences" },
+    { year: "2023 — 2024", title: "Second-Class Academic Scholarship", organization: "University of Chinese Academy of Sciences" },
+    { year: "2024 — 2025", title: "Third-Class Academic Scholarship", organization: "University of Chinese Academy of Sciences" }
+  ],
+
+  experience: [],
+  publications: [],
+  projects: [],
+  hobbies: [
+    {
+      description: "Outside of research, I enjoy listening to guofeng music, playing mahjong, solving Rubik's Cubes, and reading novels. If you share any of these interests, feel free to reach out and chat!"
+    }
+  ]
+};
