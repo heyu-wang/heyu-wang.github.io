@@ -66,8 +66,8 @@ const homepageData = {
         { text: "mahjong", bold: true },
         ", solving ",
         { text: "Rubik's Cubes", bold: true },
-        ", and ",
-        { text: "reading novels", bold: true },
+        ", and reading ",
+        { text: "novels", bold: true },
         ". If you share any of these interests, feel free to reach out and chat!"
       ]
     }
