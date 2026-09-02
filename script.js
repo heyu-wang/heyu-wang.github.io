@@ -215,7 +215,8 @@ function renderHonors() {
   const container = $("#honor-list");
   const honors = Array.isArray(data.honors) ? data.honors : [];
 
-  setOptionalText("#honors-organization", data.honorsOrganization);
+  const organization = data.honorsOrganization ? ` · ${data.honorsOrganization}` : "";
+  setOptionalText("#honors-organization", organization);
   container.replaceChildren();
   honors.forEach((item) => {
     const article = createElement("article", "honor-item");
