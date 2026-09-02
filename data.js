@@ -59,7 +59,17 @@ const homepageData = {
   projects: [],
   hobbies: [
     {
-      description: "Outside of research, I enjoy listening to guofeng music, playing mahjong, solving Rubik's Cubes, and reading novels. If you share any of these interests, feel free to reach out and chat!"
+      parts: [
+        "Outside of research, I enjoy listening to ",
+        { text: "guofeng music", bold: true },
+        ", playing ",
+        { text: "mahjong", bold: true },
+        ", solving ",
+        { text: "Rubik's Cubes", bold: true },
+        ", and ",
+        { text: "reading novels", bold: true },
+        ". If you share any of these interests, feel free to reach out and chat!"
+      ]
     }
   ]
 };

@@ -204,8 +204,24 @@ function renderHobbies() {
 
   container.replaceChildren();
   hobbies.forEach((item) => {
-    const article = createElement("p", "hobby-copy", item.description || item.title || "");
-    container.appendChild(article);
+    const article = createElement("p", "hobby-copy");
+
+    if (Array.isArray(item.parts)) {
+      item.parts.forEach((part) => {
+        const text = typeof part === "string" ? part : part?.text;
+        if (!text) return;
+
+        if (typeof part === "object" && part.bold) {
+          article.appendChild(createElement("strong", "", text));
+        } else {
+          article.appendChild(document.createTextNode(text));
+        }
+      });
+    } else {
+      article.textContent = item.description || item.title || "";
+    }
+
+    if (article.textContent.trim()) container.appendChild(article);
   });
   section.hidden = hobbies.length === 0;
 }
