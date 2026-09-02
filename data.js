@@ -11,7 +11,7 @@ const homepageData = {
     links: [
       { label: "Email", url: "mailto:wangheyu23@mails.ucas.ac.cn" },
       { label: "GitHub", url: "https://github.com/heyu-wang" },
-      { label: "CV", url: "Resume.pdf" }
+      { label: "CV", url: "Resume.pdf?v=account-rename" }
     ]
   },
 
