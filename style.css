@@ -8,6 +8,8 @@
   --accent-soft: #e7f0eb;
   --sidebar-width: 246px;
   --content-max: 790px;
+  --divider-before: 16px;
+  --divider-after: 17px;
 }
 
 * { box-sizing: border-box; }
@@ -199,21 +201,21 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 }
 
 .content { padding: 34px 0 28px; }
-.intro-block { padding: 0 0 22px; }
+.intro-block { padding: 0 0 var(--divider-before); }
 .content-section { padding: 22px 0 23px; }
 #education,
 #experience,
 #publications,
 #projects,
 #hobbies {
-  padding-top: 17px;
+  padding-top: var(--divider-after);
   border-top: 1px solid var(--line);
 }
 
-#education { padding-bottom: 14px; }
+#education { padding-bottom: var(--divider-before); }
 
 #hobbies {
-  padding-bottom: 17px;
+  padding-bottom: var(--divider-before);
   border-bottom: 1px solid var(--line);
 }
 .section-head { margin-bottom: 11px; }
@@ -258,6 +260,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   overflow-wrap: anywhere;
 }
 
+.prose p:last-child { margin-bottom: 0; }
+
 .prose a {
   color: var(--accent);
   font-weight: 600;
@@ -280,7 +284,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px;
   margin-top: 0;
-  padding-top: 17px;
+  padding: var(--divider-after) 0 var(--divider-before);
   border-top: 1px solid var(--line);
 }
 
@@ -315,6 +319,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   padding: 10px 0 11px;
   border-bottom: 0;
 }
+
+.summary-grid .interest-item:last-child,
+.summary-grid .honor-item:last-child { padding-bottom: 0; }
 
 .summary-grid .honor-year { font-size: 12px; }
 .summary-grid .honor-title { font-size: 14px; }
@@ -377,7 +384,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   display: grid;
   grid-template-columns: 100px minmax(0, 1fr);
   gap: 20px;
-  padding: 11px 0 12px;
+  padding: 11px 0 0;
   border-bottom: 0;
 }
 
@@ -412,7 +419,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 }
 
 .timeline-place {
-  margin: 2px 0 5px;
+  margin: 2px 0 0;
   color: #4e5a53;
   font-size: 13px;
   line-height: 1.6;
@@ -457,7 +464,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   display: flex;
   justify-content: space-between;
   margin-top: 2px;
-  padding: 14px 0 4px;
+  padding: var(--divider-after) 0 4px;
   color: #929b96;
   font-size: 11px;
 }
