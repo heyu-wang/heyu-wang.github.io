@@ -47,10 +47,11 @@ const homepageData = {
     }
   ],
 
+  honorsOrganization: "University of Chinese Academy of Sciences",
   honors: [
-    { year: "2024 · 2025 · 2026", title: "Triple-A Student", organization: "University of Chinese Academy of Sciences" },
-    { year: "2023 — 2024", title: "Second-Class Academic Scholarship", organization: "University of Chinese Academy of Sciences" },
-    { year: "2024 — 2025", title: "Third-Class Academic Scholarship", organization: "University of Chinese Academy of Sciences" }
+    { year: "2024 · 2025 · 2026", title: "Triple-A Student" },
+    { year: "2023 — 2024", title: "Second-Class Academic Scholarship" },
+    { year: "2024 — 2025", title: "Third-Class Academic Scholarship" }
   ],
 
   experience: [],
